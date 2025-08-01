@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Summary Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Summary Dashboard</h2>
+  <div class="summary-box">
+    <p><strong>Total Income:</strong> ₹<span id="totalIncome">0</span></p>
+    <p><strong>Total Expenses:</strong> ₹<span id="totalExpenses">0</span></p>
+    <p><strong>Balance:</strong> ₹<span id="balance">0</span></p>
+  </div>
+
+  <canvas id="chart" height="200"></canvas>
+
+  <a href="addTransaction.html"><button class="btn">Back to Add Transaction</button></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script>
+    updateSummary();
+    // renderChart();
+    renderSummaryBarChart();
+  </script>
+</body>

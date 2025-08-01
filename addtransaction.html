@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Transaction</title>
+  <link rel="stylesheet" href="style.css">
+     </head>
+<body>
+  <h2>Add Transaction</h2>
+  <form id="transactionForm">
+    <input type="number" id="amount" placeholder="Amount" required>
+    <select id="type" required>
+      <option value="">Select Type</option>
+      <option value="Income">Income</option>
+      <option value="Expense">Expense</option>
+    </select>
+    <input type="text" id="category" placeholder="Category" required>
+    <input type="date" id="date" required>
+    <textarea id="note" placeholder="Note (optional)"></textarea>
+    <button type="submit" class="btn">Add Transaction</button>
+  </form>
+
+  <div class="transaction-list">
+    <h3>Past Transactions</h3>
+    <div id="transactions"></div>
+  </div>
+
+  <a href="summary.html"><button class="btn">Go to Summary</button></a>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('transactionForm').addEventListener('submit', addTransaction);
+    updateTransactionList();
+  </script>
+</body>
+</html>
